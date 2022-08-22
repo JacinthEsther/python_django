@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {{ form }}
+    <button type="submit">Submit</button>
+</form>
+{% for task in tasks%}
+    <p>{{ todo.task }}</p>
+    <a href=""><button>Update</button></a>
+    <a href="{% url 'deleteitem' todo.id %}"><button>Delete</button></a>
+{% endfor %}
+</body>
+</html>
